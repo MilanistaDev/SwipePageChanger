@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		FDD1A47A27632DB5005D6A63 /* SwipePageChangerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1A47927632DB5005D6A63 /* SwipePageChangerApp.swift */; };
-		FDD1A47C27632DB5005D6A63 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1A47B27632DB5005D6A63 /* ContentView.swift */; };
 		FDD1A47E27632DB6005D6A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDD1A47D27632DB6005D6A63 /* Assets.xcassets */; };
 		FDD1A48127632DB6005D6A63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDD1A48027632DB6005D6A63 /* Preview Assets.xcassets */; };
+		FDD1A489276333F7005D6A63 /* TopContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1A488276333F7005D6A63 /* TopContentView.swift */; };
+		FDD1A48B27634121005D6A63 /* ToolBarViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1A48A27634121005D6A63 /* ToolBarViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FDD1A47627632DB5005D6A63 /* SwipePageChanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipePageChanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD1A47927632DB5005D6A63 /* SwipePageChangerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipePageChangerApp.swift; sourceTree = "<group>"; };
-		FDD1A47B27632DB5005D6A63 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FDD1A47D27632DB6005D6A63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDD1A48027632DB6005D6A63 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FDD1A488276333F7005D6A63 /* TopContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopContentView.swift; sourceTree = "<group>"; };
+		FDD1A48A27634121005D6A63 /* ToolBarViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				FDD1A47927632DB5005D6A63 /* SwipePageChangerApp.swift */,
-				FDD1A47B27632DB5005D6A63 /* ContentView.swift */,
+				FDD1A487276333D7005D6A63 /* Top */,
 				FDD1A47D27632DB6005D6A63 /* Assets.xcassets */,
 				FDD1A47F27632DB6005D6A63 /* Preview Content */,
 			);
@@ -65,6 +67,15 @@
 				FDD1A48027632DB6005D6A63 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FDD1A487276333D7005D6A63 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				FDD1A488276333F7005D6A63 /* TopContentView.swift */,
+				FDD1A48A27634121005D6A63 /* ToolBarViewModifier.swift */,
+			);
+			path = Top;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +148,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDD1A47C27632DB5005D6A63 /* ContentView.swift in Sources */,
+				FDD1A48B27634121005D6A63 /* ToolBarViewModifier.swift in Sources */,
+				FDD1A489276333F7005D6A63 /* TopContentView.swift in Sources */,
 				FDD1A47A27632DB5005D6A63 /* SwipePageChangerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
