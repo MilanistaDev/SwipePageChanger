@@ -10,15 +10,17 @@ import SwiftUI
 struct TopContentView: View {
     var body: some View {
         NavigationView {
-            ZStack(alignment: .bottomTrailing) {
+            ZStack(alignment: .top) {
                 VStack(spacing: .zero) {
                     TopBarSliderView()
-                    Text("Hello, World!")
-                        .padding()
-                    Spacer()
+                    PageContentView()
                 }
+                Image("img_top_bar")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100.0)
+                    .offset(x: .zero, y: -1.0)
                 FloatingButtonView()
-                    .offset(x: -16.0, y: -16.0)
             }
             .navigationBarTitleDisplayMode(.inline)
             .modifier(ToolBarViewModifier())
