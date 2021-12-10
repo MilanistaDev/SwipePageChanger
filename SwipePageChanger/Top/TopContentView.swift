@@ -10,8 +10,14 @@ import SwiftUI
 struct TopContentView: View {
     var body: some View {
         NavigationView {
-            Text("Hello, World!")
-                .modifier(ToolBarViewModifier())
+            VStack(spacing: .zero) {
+                TopBarSliderView()
+                Text("Hello, World!")
+                    .padding()
+                Spacer()
+            }
+            .navigationBarTitleDisplayMode(.inline)
+            .modifier(ToolBarViewModifier())
         }
     }
 }
