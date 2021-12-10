@@ -29,7 +29,8 @@ struct TopContentView: View {
                                    items: $items)
             }
             .navigationBarTitleDisplayMode(.inline)
-            .modifier(ToolBarViewModifier())
+            .modifier(ToolBarViewModifier(selection: $selection,
+                                          items: items))
         }
     }
 }
