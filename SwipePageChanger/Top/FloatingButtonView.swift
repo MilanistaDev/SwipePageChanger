@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct FloatingButtonView: View {
+
+    @Binding var selection: Int
+    @Binding var items: [String]
+    @State private var counter = 0
+
     var body: some View {
         VStack {
             Spacer()
             HStack {
                 Spacer()
                 Button {
+                    addNewValue()
                 } label: {
                     Image(systemName: "rectangle.stack.badge.plus")
                         .resizable()
@@ -31,11 +37,18 @@ struct FloatingButtonView: View {
             .padding(.all, 16.0)
         }
     }
+
+    private func addNewValue() {
+        counter += 1
+        items.append("\(counter)")
+        selection = items.count - 1
+    }
 }
 
 struct FloatingButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        FloatingButtonView()
+        FloatingButtonView(selection: .constant(0),
+                           items: .constant(["Top"]))
             .padding()
             .previewLayout(PreviewLayout.sizeThatFits)
     }

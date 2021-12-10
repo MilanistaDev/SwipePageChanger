@@ -8,19 +8,25 @@
 import SwiftUI
 
 struct TopContentView: View {
+
+    @State private var selection = 0
+    @State private var items = ["Top"]
+
     var body: some View {
         NavigationView {
             ZStack(alignment: .top) {
                 VStack(spacing: .zero) {
                     TopBarSliderView()
-                    PageContentView()
+                    PageContentView(selection: $selection,
+                                    items: items)
                 }
                 Image("img_top_bar")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 100.0)
                     .offset(x: .zero, y: -1.0)
-                FloatingButtonView()
+                FloatingButtonView(selection: $selection,
+                                   items: $items)
             }
             .navigationBarTitleDisplayMode(.inline)
             .modifier(ToolBarViewModifier())
