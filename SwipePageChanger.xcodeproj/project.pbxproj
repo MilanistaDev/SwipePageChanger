@@ -15,6 +15,7 @@
 		FDD1A48D27637BFC005D6A63 /* TopBarSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1A48C27637BFC005D6A63 /* TopBarSliderView.swift */; };
 		FDD1A48F27638677005D6A63 /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1A48E27638677005D6A63 /* FloatingButtonView.swift */; };
 		FDD1A49127639CEB005D6A63 /* PageContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1A49027639CEB005D6A63 /* PageContentView.swift */; };
+		FDD1A4942763D44C005D6A63 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1A4932763D44C005D6A63 /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		FDD1A48C27637BFC005D6A63 /* TopBarSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarSliderView.swift; sourceTree = "<group>"; };
 		FDD1A48E27638677005D6A63 /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
 		FDD1A49027639CEB005D6A63 /* PageContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageContentView.swift; sourceTree = "<group>"; };
+		FDD1A4932763D44C005D6A63 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			children = (
 				FDD1A47927632DB5005D6A63 /* SwipePageChangerApp.swift */,
 				FDD1A487276333D7005D6A63 /* Top */,
+				FDD1A4922763D431005D6A63 /* Data */,
 				FDD1A47D27632DB6005D6A63 /* Assets.xcassets */,
 				FDD1A47F27632DB6005D6A63 /* Preview Content */,
 			);
@@ -85,6 +88,14 @@
 				FDD1A48A27634121005D6A63 /* ToolBarViewModifier.swift */,
 			);
 			path = Top;
+			sourceTree = "<group>";
+		};
+		FDD1A4922763D431005D6A63 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FDD1A4932763D44C005D6A63 /* Constant.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDD1A4942763D44C005D6A63 /* Constant.swift in Sources */,
 				FDD1A48B27634121005D6A63 /* ToolBarViewModifier.swift in Sources */,
 				FDD1A49127639CEB005D6A63 /* PageContentView.swift in Sources */,
 				FDD1A489276333F7005D6A63 /* TopContentView.swift in Sources */,

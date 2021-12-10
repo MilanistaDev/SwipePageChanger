@@ -39,8 +39,9 @@ struct FloatingButtonView: View {
     }
 
     private func addNewValue() {
+        guard counter < marunouchi.count else { return }
+        items.append(marunouchi[counter])
         counter += 1
-        items.append("\(counter)")
         selection = items.count - 1
     }
 }
