@@ -13,6 +13,7 @@
 		FDD1A489276333F7005D6A63 /* TopContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1A488276333F7005D6A63 /* TopContentView.swift */; };
 		FDD1A48B27634121005D6A63 /* ToolBarViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1A48A27634121005D6A63 /* ToolBarViewModifier.swift */; };
 		FDD1A48D27637BFC005D6A63 /* TopBarSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1A48C27637BFC005D6A63 /* TopBarSliderView.swift */; };
+		FDD1A48F27638677005D6A63 /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1A48E27638677005D6A63 /* FloatingButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		FDD1A488276333F7005D6A63 /* TopContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopContentView.swift; sourceTree = "<group>"; };
 		FDD1A48A27634121005D6A63 /* ToolBarViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarViewModifier.swift; sourceTree = "<group>"; };
 		FDD1A48C27637BFC005D6A63 /* TopBarSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBarSliderView.swift; sourceTree = "<group>"; };
+		FDD1A48E27638677005D6A63 /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			children = (
 				FDD1A488276333F7005D6A63 /* TopContentView.swift */,
 				FDD1A48C27637BFC005D6A63 /* TopBarSliderView.swift */,
+				FDD1A48E27638677005D6A63 /* FloatingButtonView.swift */,
 				FDD1A48A27634121005D6A63 /* ToolBarViewModifier.swift */,
 			);
 			path = Top;
@@ -154,6 +157,7 @@
 				FDD1A48B27634121005D6A63 /* ToolBarViewModifier.swift in Sources */,
 				FDD1A489276333F7005D6A63 /* TopContentView.swift in Sources */,
 				FDD1A47A27632DB5005D6A63 /* SwipePageChangerApp.swift in Sources */,
+				FDD1A48F27638677005D6A63 /* FloatingButtonView.swift in Sources */,
 				FDD1A48D27637BFC005D6A63 /* TopBarSliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
