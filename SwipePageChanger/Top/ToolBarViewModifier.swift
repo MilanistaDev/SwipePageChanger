@@ -11,6 +11,7 @@ struct ToolBarViewModifier: ViewModifier {
 
     @Binding var selection: Int
     let items: [String]
+    @State var proxy: ScrollViewProxy?
 
     func body(content: Content) -> some View {
         content
@@ -26,18 +27,35 @@ struct ToolBarViewModifier: ViewModifier {
                     }
                 }
                 ToolbarItem(placement: .principal) {
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: .zero) {
-                            ForEach(items.reversed().indices, id: \.self) { index in
-                                Button {
-                                    selection = index
-                                } label: {
-                                    Text(items.reversed()[index])
-                                        .font(.subheadline)
-                                        .fontWeight(selection == index ? .semibold: .regular)
-                                        .foregroundColor(selection == index ? .primary: .gray)
+                    ScrollViewReader { scrollProxy in
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: .zero) {
+                                Spacer()
+                                    .frame(width: (UIScreen.main.bounds.width - 116.0 - 100.0) / 2)
+                                ForEach(items.reversed().indices, id: \.self) { index in
+                                    Button {
+                                        selection = index
+                                        withAnimation {
+                                            scrollProxy.scrollTo(selection, anchor: .center)
+                                        }
+                                    } label: {
+                                        Text(items.reversed()[index])
+                                            .font(.subheadline)
+                                            .fontWeight(selection == index ? .semibold: .regular)
+                                            .foregroundColor(selection == index ? .primary: .gray)
+                                            .id(index)
+                                    }
+                                    .frame(width: 100.0, height: 44.0)
                                 }
-                                .frame(width: 100.0, height: 44.0)
+                                Spacer().frame(width: (UIScreen.main.bounds.width - 116.0 - 100.0) / 2)
+                            }
+                            .onAppear {
+                                self.proxy = scrollProxy
+                            }
+                            .onChange(of: selection) { newValue in
+                                withAnimation {
+                                    self.proxy?.scrollTo(selection, anchor: .center)
+                                }
                             }
                         }
                     }
