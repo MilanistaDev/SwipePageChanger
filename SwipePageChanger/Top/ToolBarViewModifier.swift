@@ -30,8 +30,9 @@ struct ToolBarViewModifier: ViewModifier {
                     ScrollViewReader { scrollProxy in
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: .zero) {
+                                // 16 or 20pt * 2 (diretionalLayoutMargin.trailing and leading values)
                                 Spacer()
-                                    .frame(width: (UIScreen.main.bounds.width - 116.0 - 100.0) / 2)
+                                    .frame(width: (UIScreen.main.bounds.width - 76.0 - 40.0 - 100.0) / 2)
                                 ForEach(items.reversed().indices, id: \.self) { index in
                                     Button {
                                         selection = index
@@ -39,20 +40,28 @@ struct ToolBarViewModifier: ViewModifier {
                                             scrollProxy.scrollTo(selection, anchor: .center)
                                         }
                                     } label: {
-                                        Text(items.reversed()[index])
-                                            .font(.subheadline)
-                                            .fontWeight(selection == index ? .semibold: .regular)
-                                            .foregroundColor(selection == index ? .primary: .gray)
-                                            .id(index)
+                                        if index == items.count - 1 {
+                                            Image("02_Marunouchi")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 30.0, height: 30.0)
+                                        } else {
+                                            Text(items.reversed()[index])
+                                                .font(.subheadline)
+                                                .fontWeight(selection == index ? .semibold: .regular)
+                                                .foregroundColor(selection == index ? .primary: .gray)
+                                                .id(index)
+                                        }
                                     }
                                     .frame(width: 100.0, height: 44.0)
                                 }
-                                Spacer().frame(width: (UIScreen.main.bounds.width - 116.0 - 100.0) / 2)
+                                Spacer()
+                                    .frame(width: (UIScreen.main.bounds.width - 116.0 - 100.0) / 2)
                             }
                             .onAppear {
                                 self.proxy = scrollProxy
                             }
-                            .onChange(of: selection) { newValue in
+                            .onChange(of: selection) { _ in
                                 withAnimation {
                                     self.proxy?.scrollTo(selection, anchor: .center)
                                 }
