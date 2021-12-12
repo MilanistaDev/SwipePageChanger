@@ -12,6 +12,7 @@ struct ToolBarViewModifier: ViewModifier {
     @Binding var selection: Int
     let items: [String]
     @State var proxy: ScrollViewProxy?
+    private let tabButtonSize: CGSize = CGSize(width: 100.0, height: 44.0)
 
     func body(content: Content) -> some View {
         content
@@ -27,45 +28,47 @@ struct ToolBarViewModifier: ViewModifier {
                     }
                 }
                 ToolbarItem(placement: .principal) {
-                    ScrollViewReader { scrollProxy in
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: .zero) {
-                                // 16 or 20pt * 2 (diretionalLayoutMargin.trailing and leading values)
-                                Spacer()
-                                    .frame(width: (UIScreen.main.bounds.width - 76.0 - 40.0 - 100.0) / 2)
-                                ForEach(items.reversed().indices, id: \.self) { index in
-                                    Button {
-                                        selection = index
-                                        withAnimation {
-                                            scrollProxy.scrollTo(selection, anchor: .center)
+                    GeometryReader { geometryProxy in
+                        ScrollViewReader { scrollProxy in
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(spacing: .zero) {
+                                    Spacer()
+                                        .frame(width: spacerWidth(geometryProxy.frame(in: .global).origin.x))
+                                    ForEach(items.reversed().indices, id: \.self) { index in
+                                        Button {
+                                            selection = index
+                                            withAnimation {
+                                                scrollProxy.scrollTo(selection, anchor: .center)
+                                            }
+                                        } label: {
+                                            if index == items.count - 1 {
+                                                Image("02_Marunouchi")
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 30.0, height: 30.0)
+                                            } else {
+                                                Text(items.reversed()[index])
+                                                    .font(.subheadline)
+                                                    .fontWeight(selection == index ? .semibold: .regular)
+                                                    .foregroundColor(selection == index ? .primary: .gray)
+                                                    .id(index)
+                                            }
                                         }
-                                    } label: {
-                                        if index == items.count - 1 {
-                                            Image("02_Marunouchi")
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(width: 30.0, height: 30.0)
-                                        } else {
-                                            Text(items.reversed()[index])
-                                                .font(.subheadline)
-                                                .fontWeight(selection == index ? .semibold: .regular)
-                                                .foregroundColor(selection == index ? .primary: .gray)
-                                                .id(index)
-                                        }
+                                        .frame(width: 100.0, height: 44.0)
                                     }
-                                    .frame(width: 100.0, height: 44.0)
+                                    Spacer()
+                                        .frame(width: spacerWidth(geometryProxy.frame(in: .global).origin.x))
                                 }
-                                Spacer()
-                                    .frame(width: (UIScreen.main.bounds.width - 116.0 - 100.0) / 2)
-                            }
-                            .onAppear {
-                                self.proxy = scrollProxy
-                            }
-                            .onChange(of: selection) { _ in
-                                withAnimation {
-                                    self.proxy?.scrollTo(selection, anchor: .center)
+                                .onAppear {
+                                    self.proxy = scrollProxy
+                                }
+                                .onChange(of: selection) { _ in
+                                    withAnimation {
+                                        self.proxy?.scrollTo(selection, anchor: .center)
+                                    }
                                 }
                             }
+
                         }
                     }
                 }
@@ -80,5 +83,9 @@ struct ToolBarViewModifier: ViewModifier {
                     }
                 }
             }
+    }
+
+    private func spacerWidth(_ viewOriginX: CGFloat) -> CGFloat {
+        return (UIScreen.main.bounds.width - (viewOriginX * 2) - tabButtonSize.width) / 2
     }
 }
