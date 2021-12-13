@@ -29,46 +29,57 @@ struct ToolBarViewModifier: ViewModifier {
                 }
                 ToolbarItem(placement: .principal) {
                     GeometryReader { geometryProxy in
-                        ScrollViewReader { scrollProxy in
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack(spacing: .zero) {
-                                    Spacer()
-                                        .frame(width: spacerWidth(geometryProxy.frame(in: .global).origin.x))
-                                    ForEach(items.reversed().indices, id: \.self) { index in
-                                        Button {
-                                            selection = index
-                                            withAnimation {
-                                                scrollProxy.scrollTo(selection, anchor: .center)
+                        ZStack {
+                            ScrollViewReader { scrollProxy in
+                                ScrollView(.horizontal, showsIndicators: false) {
+                                    HStack(spacing: .zero) {
+                                        Spacer()
+                                            .frame(width: spacerWidth(geometryProxy.frame(in: .global).origin.x))
+                                        ForEach(items.reversed().indices, id: \.self) { index in
+                                            Button {
+                                                selection = index
+                                                withAnimation {
+                                                    scrollProxy.scrollTo(selection, anchor: .center)
+                                                }
+                                            } label: {
+                                                if index == items.count - 1 {
+                                                    Image("02_Marunouchi")
+                                                        .resizable()
+                                                        .scaledToFit()
+                                                        .frame(width: 30.0, height: 30.0)
+                                                } else {
+                                                    Text(items.reversed()[index])
+                                                        .font(.subheadline)
+                                                        .fontWeight(selection == index ? .semibold: .regular)
+                                                        .foregroundColor(selection == index ? .primary: .gray)
+                                                        .id(index)
+                                                }
                                             }
-                                        } label: {
-                                            if index == items.count - 1 {
-                                                Image("02_Marunouchi")
-                                                    .resizable()
-                                                    .scaledToFit()
-                                                    .frame(width: 30.0, height: 30.0)
-                                            } else {
-                                                Text(items.reversed()[index])
-                                                    .font(.subheadline)
-                                                    .fontWeight(selection == index ? .semibold: .regular)
-                                                    .foregroundColor(selection == index ? .primary: .gray)
-                                                    .id(index)
-                                            }
+                                            .frame(width: 100.0, height: 44.0)
                                         }
-                                        .frame(width: 100.0, height: 44.0)
+                                        Spacer()
+                                            .frame(width: spacerWidth(geometryProxy.frame(in: .global).origin.x))
                                     }
-                                    Spacer()
-                                        .frame(width: spacerWidth(geometryProxy.frame(in: .global).origin.x))
-                                }
-                                .onAppear {
-                                    self.proxy = scrollProxy
-                                }
-                                .onChange(of: selection) { _ in
-                                    withAnimation {
-                                        self.proxy?.scrollTo(selection, anchor: .center)
+                                    .onAppear {
+                                        self.proxy = scrollProxy
+                                    }
+                                    .onChange(of: selection) { _ in
+                                        withAnimation {
+                                            self.proxy?.scrollTo(selection, anchor: .center)
+                                        }
                                     }
                                 }
-                            }
 
+                            }
+                            HStack {
+                                LinearGradient(gradient: Gradient(colors: [.white, .white.opacity(0.1)]),
+                                               startPoint: .leading, endPoint: .trailing)
+                                    .frame(width: 8.0, height: 44.0)
+                                Spacer()
+                                LinearGradient(gradient: Gradient(colors: [.white.opacity(0.1), .white]),
+                                               startPoint: .leading, endPoint: .trailing)
+                                    .frame(width: 8.0, height: 44.0)
+                            }
                         }
                     }
                 }
