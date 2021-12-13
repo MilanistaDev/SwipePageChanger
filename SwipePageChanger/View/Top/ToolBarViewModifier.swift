@@ -72,11 +72,11 @@ struct ToolBarViewModifier: ViewModifier {
 
                             }
                             HStack {
-                                LinearGradient(gradient: Gradient(colors: [.white, .white.opacity(0.1)]),
+                                LinearGradient(gradient: Gradient(colors: [.gradation, .gradation.opacity(0.1)]),
                                                startPoint: .leading, endPoint: .trailing)
                                     .frame(width: 8.0, height: 44.0)
                                 Spacer()
-                                LinearGradient(gradient: Gradient(colors: [.white.opacity(0.1), .white]),
+                                LinearGradient(gradient: Gradient(colors: [.gradation.opacity(0.1), .gradation]),
                                                startPoint: .leading, endPoint: .trailing)
                                     .frame(width: 8.0, height: 44.0)
                             }
