@@ -40,7 +40,7 @@ struct FloatingButtonView: View {
 
     private func addNewValue() {
         guard counter < marunouchi.count else { return }
-        items.append(marunouchi[counter])
+        items.append(marunouchi[counter].staName)
         counter += 1
         selection = items.count - 1
     }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FD7321E12767986400927135 /* Color+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7321E02767986400927135 /* Color+Assets.swift */; };
 		FD7321E427679BBE00927135 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7321E327679BBE00927135 /* WebView.swift */; };
+		FD7321E72768E47E00927135 /* StationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7321E62768E47E00927135 /* StationInfo.swift */; };
 		FDD1A47A27632DB5005D6A63 /* SwipePageChangerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1A47927632DB5005D6A63 /* SwipePageChangerApp.swift */; };
 		FDD1A47E27632DB6005D6A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDD1A47D27632DB6005D6A63 /* Assets.xcassets */; };
 		FDD1A48127632DB6005D6A63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDD1A48027632DB6005D6A63 /* Preview Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		FD7321E02767986400927135 /* Color+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Assets.swift"; sourceTree = "<group>"; };
 		FD7321E327679BBE00927135 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		FD7321E62768E47E00927135 /* StationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationInfo.swift; sourceTree = "<group>"; };
 		FDD1A47627632DB5005D6A63 /* SwipePageChanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipePageChanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD1A47927632DB5005D6A63 /* SwipePageChangerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipePageChangerApp.swift; sourceTree = "<group>"; };
 		FDD1A47D27632DB6005D6A63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 			path = Web;
 			sourceTree = "<group>";
 		};
+		FD7321E52768E45D00927135 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD7321E62768E47E00927135 /* StationInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		FDD1A46D27632DB4005D6A63 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 			children = (
 				FDD1A47927632DB5005D6A63 /* SwipePageChangerApp.swift */,
 				FD7321DF2767983A00927135 /* View */,
+				FD7321E52768E45D00927135 /* Model */,
 				FD7321DE2767982700927135 /* Extension */,
 				FDD1A4922763D431005D6A63 /* Data */,
 				FDD1A47D27632DB6005D6A63 /* Assets.xcassets */,
@@ -204,6 +215,7 @@
 				FDD1A49127639CEB005D6A63 /* PageContentView.swift in Sources */,
 				FDD1A489276333F7005D6A63 /* TopContentView.swift in Sources */,
 				FDD1A47A27632DB5005D6A63 /* SwipePageChangerApp.swift in Sources */,
+				FD7321E72768E47E00927135 /* StationInfo.swift in Sources */,
 				FD7321E427679BBE00927135 /* WebView.swift in Sources */,
 				FDD1A48F27638677005D6A63 /* FloatingButtonView.swift in Sources */,
 				FDD1A48D27637BFC005D6A63 /* TopBarSliderView.swift in Sources */,
