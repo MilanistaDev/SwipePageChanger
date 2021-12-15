@@ -13,13 +13,20 @@ struct StationNewsView: View {
     private let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
 
     var body: some View {
-        LazyVGrid(columns: columns) {
-            Section(header: StationNewsHeaderView(stationName: stationInfo.staName)) {
+        LazyVGrid(columns: columns, spacing: 12.0) {
+            Section(header: StationNewsHeaderView(title: stationInfo.staName + (stationInfo.staName == "丸ノ内線" ? "のニュース": "駅のニュース"))) {
                 ForEach(sampleNews, id: \.self) { news in
-                    Text(news.title)
+                    StationNewsRowView(stationNewsInfo: news)
+                }
+            }
+            Section(header: StationNewsHeaderView(title: "おしらせ")) {
+                ForEach(sampleNews2, id: \.self) { news in
+                    StationNewsRowView(stationNewsInfo: news)
                 }
             }
         }
+        .padding(.horizontal, 20.0)
+        .padding(.bottom, 20.0)
     }
 }
 

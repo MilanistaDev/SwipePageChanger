@@ -9,18 +9,17 @@ import SwiftUI
 
 struct StationNewsHeaderView: View {
 
-    let stationName: String
+    let title: String
 
     var body: some View {
         HStack {
             Rectangle()
                 .fill(Color.red)
                 .frame(width: 8.0, height: 24.0)
-            Text(stationName + (stationName == "丸ノ内線" ? "のニュース": "駅のニュース"))
+            Text(title)
                 .font(.headline)
             Spacer()
         }
-        .padding(.leading, 20.0)
         .padding(.vertical, 4.0)
     }
 }
@@ -29,8 +28,9 @@ struct StationNewsHeaderView: View {
 struct StationNewsHeaderView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            StationNewsHeaderView(stationName: topContent.staName)
-            StationNewsHeaderView(stationName: marunouchi[16].staName)
+            StationNewsHeaderView(title: topContent.staName + "のニュース")
+            StationNewsHeaderView(title: marunouchi[16].staName + "駅のニュース")
+            StationNewsHeaderView(title: "トリビア")
         }
         .previewLayout(PreviewLayout.sizeThatFits)
     }
