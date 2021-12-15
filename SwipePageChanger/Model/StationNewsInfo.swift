@@ -23,10 +23,10 @@ let sampleNews: [StationNewsInfo] = [
                     url: "https://www.tokyometro.jp/news/images_h/metroNews20180326_40.pdf"),
     StationNewsInfo(image: "img_news_03", title: "サードレール",
                     description: "丸ノ内線は銀座線と同じくサードレール方式(第三軌条方式)。トンネルが小さくてすみました。",
-                    url: "https://google.com/search/?q=%E3%82%B5%E3%83%BC%E3%83%89%E3%83%AC%E3%83%BC%E3%83%AB"),
+                    url: "https://google.com/search?q=%E3%82%B5%E3%83%BC%E3%83%89%E3%83%AC%E3%83%BC%E3%83%AB"),
     StationNewsInfo(image: "img_news_00", title: "茗荷谷，なんで？",
                     description: "各駅は発車メロディに変わってきました。茗荷谷はまだ営団ブザーなのです。住宅街が近いから？",
-                    url: "https://google.com/search/?q=%E8%8C%97%E8%8D%B7%E8%B0%B7+%E3%83%96%E3%82%B6%E3%83%BC")
+                    url: "https://google.com/search?q=%E8%8C%97%E8%8D%B7%E8%B0%B7+%E3%83%96%E3%82%B6%E3%83%BC")
 ]
 
 let sampleNews2: [StationNewsInfo] = [
@@ -38,8 +38,8 @@ let sampleNews2: [StationNewsInfo] = [
                     url: "https://www.tokyometro.jp/news/images_h/metroNews20180326_40.pdf"),
     StationNewsInfo(image: "img_news_03", title: "【サードレール】",
                     description: "丸ノ内線は銀座線と同じくサードレール方式(第三軌条方式)。トンネルが小さくてすみました。",
-                    url: "https://google.com/search/?q=%E3%82%B5%E3%83%BC%E3%83%89%E3%83%AC%E3%83%BC%E3%83%AB"),
+                    url: "https://google.com/search?q=%E3%82%B5%E3%83%BC%E3%83%89%E3%83%AC%E3%83%BC%E3%83%AB"),
     StationNewsInfo(image: "img_news_00", title: "【茗荷谷，なんで？】",
                     description: "各駅は発車メロディに変わってきました。茗荷谷はまだ営団ブザーなのです。住宅街が近いから？",
-                    url: "https://google.com/search/?q=%E8%8C%97%E8%8D%B7%E8%B0%B7+%E3%83%96%E3%82%B6%E3%83%BC")
+                    url: "https://google.com/search?q=%E8%8C%97%E8%8D%B7%E8%B0%B7+%E3%83%96%E3%82%B6%E3%83%BC")
 ]

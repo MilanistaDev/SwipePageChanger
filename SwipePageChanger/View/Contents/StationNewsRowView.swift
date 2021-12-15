@@ -10,6 +10,7 @@ import SwiftUI
 struct StationNewsRowView: View {
 
     let stationNewsInfo: StationNewsInfo
+    @State private var isShowModal = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: .zero) {
@@ -37,6 +38,13 @@ struct StationNewsRowView: View {
         .background(Color(UIColor.tertiarySystemBackground))
         .cornerRadius(8.0)
         .shadow(color: .black.opacity(0.3), radius: 5.0, x: .zero, y: .zero)
+        .onTapGesture {
+            isShowModal.toggle()
+        }
+        .fullScreenCover(isPresented: $isShowModal) {
+            SafariView(url: URL(string: stationNewsInfo.url)!)
+                .ignoresSafeArea()
+        }
     }
 }
 
