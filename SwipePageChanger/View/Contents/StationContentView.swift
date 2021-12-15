@@ -19,7 +19,6 @@ struct StationContentView: View {
                 Spacer()
             }
         }
-        .ignoresSafeArea()
     }
 }
 

@@ -13,24 +13,28 @@ struct TopContentView: View {
     @State private var items: [StationInfo] = [topContent]
 
     var body: some View {
-        NavigationView {
-            ZStack(alignment: .top) {
-                VStack(spacing: .zero) {
-                    TopBarSliderView()
-                    PageContentView(selection: $selection,
-                                    items: items)
+        GeometryReader { geometryProxy in
+            NavigationView {
+                ZStack(alignment: .top) {
+                    VStack(spacing: .zero) {
+                        TopBarSliderView()
+                        PageContentView(selection: $selection,
+                                        items: items)
+                    }
+                    Image("img_top_bar")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100.0)
+                        .offset(x: .zero, y: -1.0)
+                    FloatingButtonView(selection: $selection,
+                                       items: $items)
+                        .offset(x: .zero, y: -geometryProxy.safeAreaInsets.bottom)
                 }
-                Image("img_top_bar")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100.0)
-                    .offset(x: .zero, y: -1.0)
-                FloatingButtonView(selection: $selection,
-                                   items: $items)
+                .navigationBarTitleDisplayMode(.inline)
+                .modifier(ToolBarViewModifier(selection: $selection,
+                                              items: items))
+                .ignoresSafeArea(.all, edges: .bottom)
             }
-            .navigationBarTitleDisplayMode(.inline)
-            .modifier(ToolBarViewModifier(selection: $selection,
-                                          items: items))
         }
     }
 }
