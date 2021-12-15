@@ -13,10 +13,15 @@ struct StationNewsRowView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: .zero) {
-            Image(stationNewsInfo.image)
-                .resizable()
-                .scaledToFill()
-                .frame(height: 120.0)
+            Color(UIColor.tertiarySystemBackground)
+                .aspectRatio(1.2, contentMode: .fill)
+                .overlay(
+                    Image(stationNewsInfo.image)
+                        .resizable()
+                        .scaledToFill()
+                )
+                .offset(x: .zero, y: -2.0)
+                .padding(.bottom, 8.0)
             Group {
                 Text(stationNewsInfo.title)
                     .font(.subheadline)
