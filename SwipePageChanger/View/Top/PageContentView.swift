@@ -10,12 +10,12 @@ import SwiftUI
 struct PageContentView: View {
 
     @Binding var selection: Int
-    let items: [String]
+    let items: [StationInfo]
 
     var body: some View {
         TabView(selection: $selection) {
             ForEach(items.indices, id: \.self) { index in
-                Text(items.reversed()[index])
+                Text(items.reversed()[index].staName)
                     .tag(index)
             }
         }
@@ -31,6 +31,6 @@ struct PageContentView: View {
 struct PageContentView_Previews: PreviewProvider {
     static var previews: some View {
         PageContentView(selection: .constant(0),
-                        items: ["Top"])
+                        items: [topContent])
     }
 }

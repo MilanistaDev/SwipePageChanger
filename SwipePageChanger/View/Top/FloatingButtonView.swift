@@ -10,7 +10,7 @@ import SwiftUI
 struct FloatingButtonView: View {
 
     @Binding var selection: Int
-    @Binding var items: [String]
+    @Binding var items: [StationInfo]
     @State private var counter = 0
 
     var body: some View {
@@ -40,7 +40,7 @@ struct FloatingButtonView: View {
 
     private func addNewValue() {
         guard counter < marunouchi.count else { return }
-        items.append(marunouchi[counter].staName)
+        items.append(marunouchi[counter])
         counter += 1
         selection = items.count - 1
     }
@@ -49,7 +49,7 @@ struct FloatingButtonView: View {
 struct FloatingButtonView_Previews: PreviewProvider {
     static var previews: some View {
         FloatingButtonView(selection: .constant(0),
-                           items: .constant(["Top"]))
+                           items: .constant([topContent]))
             .padding()
             .previewLayout(PreviewLayout.sizeThatFits)
     }

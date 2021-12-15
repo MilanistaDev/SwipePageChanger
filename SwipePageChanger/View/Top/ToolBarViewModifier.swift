@@ -10,7 +10,7 @@ import SwiftUI
 struct ToolBarViewModifier: ViewModifier {
 
     @Binding var selection: Int
-    let items: [String]
+    let items: [StationInfo]
     @State var proxy: ScrollViewProxy?
     private let tabButtonSize: CGSize = CGSize(width: 100.0, height: 44.0)
 
@@ -43,12 +43,12 @@ struct ToolBarViewModifier: ViewModifier {
                                                 }
                                             } label: {
                                                 if index == items.count - 1 {
-                                                    Image("02_Marunouchi")
+                                                    Image(items.reversed()[index].staNum)
                                                         .resizable()
                                                         .scaledToFit()
                                                         .frame(width: 30.0, height: 30.0)
                                                 } else {
-                                                    Text(items.reversed()[index])
+                                                    Text(items.reversed()[index].staName)
                                                         .font(.subheadline)
                                                         .fontWeight(selection == index ? .semibold: .regular)
                                                         .foregroundColor(selection == index ? .primary: .gray)

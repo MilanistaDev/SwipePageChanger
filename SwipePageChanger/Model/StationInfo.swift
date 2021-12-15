@@ -12,3 +12,7 @@ struct StationInfo {
     var staName: String
     var url: String
 }
+
+let topContent = StationInfo(staNum: "02_Marunouchi",
+                             staName: "TOP",
+                             url: "https://www.tokyometro.jp/station/line_marunouchi/index.html")

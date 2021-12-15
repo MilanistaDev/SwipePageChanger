@@ -10,7 +10,7 @@ import SwiftUI
 struct TopContentView: View {
 
     @State private var selection = 0
-    @State private var items = ["Top"]
+    @State private var items: [StationInfo] = [topContent]
 
     var body: some View {
         NavigationView {
