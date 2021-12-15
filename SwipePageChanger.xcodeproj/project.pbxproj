@@ -13,6 +13,9 @@
 		FD7321EA2768EBB700927135 /* StationContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7321E92768EBB700927135 /* StationContentView.swift */; };
 		FD7321EC276A2FA600927135 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7321EB276A2FA600927135 /* SafariView.swift */; };
 		FD7321EE276A306200927135 /* TargetStationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7321ED276A306200927135 /* TargetStationCardView.swift */; };
+		FD7321F0276A47D100927135 /* StationNewsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7321EF276A47D100927135 /* StationNewsInfo.swift */; };
+		FD7321F6276A530000927135 /* StationNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7321F5276A530000927135 /* StationNewsView.swift */; };
+		FD7321F8276A575C00927135 /* StationNewsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7321F7276A575C00927135 /* StationNewsHeaderView.swift */; };
 		FDD1A47A27632DB5005D6A63 /* SwipePageChangerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD1A47927632DB5005D6A63 /* SwipePageChangerApp.swift */; };
 		FDD1A47E27632DB6005D6A63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDD1A47D27632DB6005D6A63 /* Assets.xcassets */; };
 		FDD1A48127632DB6005D6A63 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDD1A48027632DB6005D6A63 /* Preview Assets.xcassets */; };
@@ -31,6 +34,9 @@
 		FD7321E92768EBB700927135 /* StationContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationContentView.swift; sourceTree = "<group>"; };
 		FD7321EB276A2FA600927135 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		FD7321ED276A306200927135 /* TargetStationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetStationCardView.swift; sourceTree = "<group>"; };
+		FD7321EF276A47D100927135 /* StationNewsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationNewsInfo.swift; sourceTree = "<group>"; };
+		FD7321F5276A530000927135 /* StationNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationNewsView.swift; sourceTree = "<group>"; };
+		FD7321F7276A575C00927135 /* StationNewsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationNewsHeaderView.swift; sourceTree = "<group>"; };
 		FDD1A47627632DB5005D6A63 /* SwipePageChanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwipePageChanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD1A47927632DB5005D6A63 /* SwipePageChangerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipePageChangerApp.swift; sourceTree = "<group>"; };
 		FDD1A47D27632DB6005D6A63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				FD7321E62768E47E00927135 /* StationInfo.swift */,
+				FD7321EF276A47D100927135 /* StationNewsInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -94,6 +101,8 @@
 			children = (
 				FD7321E92768EBB700927135 /* StationContentView.swift */,
 				FD7321ED276A306200927135 /* TargetStationCardView.swift */,
+				FD7321F5276A530000927135 /* StationNewsView.swift */,
+				FD7321F7276A575C00927135 /* StationNewsHeaderView.swift */,
 			);
 			path = Contents;
 			sourceTree = "<group>";
@@ -227,12 +236,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDD1A4942763D44C005D6A63 /* Constant.swift in Sources */,
+				FD7321F0276A47D100927135 /* StationNewsInfo.swift in Sources */,
 				FDD1A48B27634121005D6A63 /* ToolBarViewModifier.swift in Sources */,
 				FD7321EA2768EBB700927135 /* StationContentView.swift in Sources */,
+				FD7321F6276A530000927135 /* StationNewsView.swift in Sources */,
 				FD7321E12767986400927135 /* Color+Assets.swift in Sources */,
 				FD7321EC276A2FA600927135 /* SafariView.swift in Sources */,
 				FDD1A49127639CEB005D6A63 /* PageContentView.swift in Sources */,
 				FDD1A489276333F7005D6A63 /* TopContentView.swift in Sources */,
+				FD7321F8276A575C00927135 /* StationNewsHeaderView.swift in Sources */,
 				FDD1A47A27632DB5005D6A63 /* SwipePageChangerApp.swift in Sources */,
 				FD7321E72768E47E00927135 /* StationInfo.swift in Sources */,
 				FD7321EE276A306200927135 /* TargetStationCardView.swift in Sources */,

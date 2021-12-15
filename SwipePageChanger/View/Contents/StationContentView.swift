@@ -16,7 +16,7 @@ struct StationContentView: View {
             VStack {
                 TargetStationCardView(stationInfo: stationInfo)
                     .padding(.all, 20.0)
-                Spacer()
+                StationNewsView(stationInfo: stationInfo)
             }
         }
     }
