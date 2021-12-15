@@ -15,7 +15,7 @@ struct PageContentView: View {
     var body: some View {
         TabView(selection: $selection) {
             ForEach(items.indices, id: \.self) { index in
-                Text(items.reversed()[index].staName)
+                StationContentView(stationInfo: items.reversed()[index])
                     .tag(index)
             }
         }
