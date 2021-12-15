@@ -19,7 +19,7 @@ struct PageContentView: View {
                     .tag(index)
             }
         }
-        .background(Color.gray.opacity(0.1))
+        .background(Color(UIColor.systemGroupedBackground))
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
         .animation(.linear(duration: 0.3))
         .onAppear {

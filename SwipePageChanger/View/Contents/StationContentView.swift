@@ -12,7 +12,14 @@ struct StationContentView: View {
     let stationInfo: StationInfo
 
     var body: some View {
-        Text(stationInfo.staName)
+        ScrollView {
+            VStack {
+                TargetStationCardView(stationInfo: stationInfo)
+                    .padding(.all, 20.0)
+                Spacer()
+            }
+        }
+        .ignoresSafeArea()
     }
 }
 

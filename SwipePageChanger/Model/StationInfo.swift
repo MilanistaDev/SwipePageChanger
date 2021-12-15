@@ -14,5 +14,5 @@ struct StationInfo {
 }
 
 let topContent = StationInfo(staNum: "02_Marunouchi",
-                             staName: "TOP",
+                             staName: "丸ノ内線",
                              url: "https://www.tokyometro.jp/station/line_marunouchi/index.html")
