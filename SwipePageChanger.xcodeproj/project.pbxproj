@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD1537EA276C863800D7C8BD /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1537E9276C863800D7C8BD /* NoticeView.swift */; };
 		FD7321E12767986400927135 /* Color+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7321E02767986400927135 /* Color+Assets.swift */; };
 		FD7321E427679BBE00927135 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7321E327679BBE00927135 /* WebView.swift */; };
 		FD7321E72768E47E00927135 /* StationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7321E62768E47E00927135 /* StationInfo.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD1537E9276C863800D7C8BD /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
 		FD7321E02767986400927135 /* Color+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Assets.swift"; sourceTree = "<group>"; };
 		FD7321E327679BBE00927135 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		FD7321E62768E47E00927135 /* StationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationInfo.swift; sourceTree = "<group>"; };
@@ -62,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD1537E8276C861A00D7C8BD /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				FD1537E9276C863800D7C8BD /* NoticeView.swift */,
+			);
+			path = Notice;
+			sourceTree = "<group>";
+		};
 		FD7321DE2767982700927135 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +85,7 @@
 			children = (
 				FDD1A487276333D7005D6A63 /* Top */,
 				FD7321E82768E8FC00927135 /* Contents */,
+				FD1537E8276C861A00D7C8BD /* Notice */,
 				FD7321E227679BA200927135 /* Web */,
 			);
 			path = View;
@@ -250,6 +261,7 @@
 				FDD1A489276333F7005D6A63 /* TopContentView.swift in Sources */,
 				FD7321F8276A575C00927135 /* StationNewsHeaderView.swift in Sources */,
 				FDD1A47A27632DB5005D6A63 /* SwipePageChangerApp.swift in Sources */,
+				FD1537EA276C863800D7C8BD /* NoticeView.swift in Sources */,
 				FD7321E72768E47E00927135 /* StationInfo.swift in Sources */,
 				FD7321EE276A306200927135 /* TargetStationCardView.swift in Sources */,
 				FD7321E427679BBE00927135 /* WebView.swift in Sources */,

@@ -84,8 +84,7 @@ struct ToolBarViewModifier: ViewModifier {
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                    } label: {
+                    NavigationLink(destination: NoticeView()) {
                         Image(systemName: "bell.fill")
                             .resizable()
                             .scaledToFit()
