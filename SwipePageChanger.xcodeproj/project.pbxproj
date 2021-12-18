@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FD1537EA276C863800D7C8BD /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1537E9276C863800D7C8BD /* NoticeView.swift */; };
+		FD1537EC276E051700D7C8BD /* NoticeLinkCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1537EB276E051700D7C8BD /* NoticeLinkCardView.swift */; };
 		FD7321E12767986400927135 /* Color+Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7321E02767986400927135 /* Color+Assets.swift */; };
 		FD7321E427679BBE00927135 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7321E327679BBE00927135 /* WebView.swift */; };
 		FD7321E72768E47E00927135 /* StationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7321E62768E47E00927135 /* StationInfo.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		FD1537E9276C863800D7C8BD /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
+		FD1537EB276E051700D7C8BD /* NoticeLinkCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeLinkCardView.swift; sourceTree = "<group>"; };
 		FD7321E02767986400927135 /* Color+Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Assets.swift"; sourceTree = "<group>"; };
 		FD7321E327679BBE00927135 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		FD7321E62768E47E00927135 /* StationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationInfo.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				FD1537E9276C863800D7C8BD /* NoticeView.swift */,
+				FD1537EB276E051700D7C8BD /* NoticeLinkCardView.swift */,
 			);
 			path = Notice;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				FDD1A4942763D44C005D6A63 /* Constant.swift in Sources */,
 				FD7321F0276A47D100927135 /* StationNewsInfo.swift in Sources */,
 				FDD1A48B27634121005D6A63 /* ToolBarViewModifier.swift in Sources */,
+				FD1537EC276E051700D7C8BD /* NoticeLinkCardView.swift in Sources */,
 				FD7321EA2768EBB700927135 /* StationContentView.swift in Sources */,
 				FD7321FA276A583E00927135 /* StationNewsRowView.swift in Sources */,
 				FD7321F6276A530000927135 /* StationNewsView.swift in Sources */,

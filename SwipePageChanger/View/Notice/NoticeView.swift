@@ -9,7 +9,15 @@ import SwiftUI
 
 struct NoticeView: View {
     var body: some View {
-        Text("Hello, World!")
+        ScrollView {
+            VStack {
+                NoticeLinkCardView()
+            }
+            .padding(.horizontal, 20.0)
+            .padding(.top, 20.0)
+        }
+        .navigationTitle("お知らせ")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
