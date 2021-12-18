@@ -37,3 +37,10 @@ let marunouchi: [StationInfo] = [
     StationInfo(staNum: "Mb04", staName: "中野富士見町", url: "https://www.tokyometro.jp/station/nakano-fujimicho/index.html"),
     StationInfo(staNum: "Mb03", staName: "方南町", url: "https://www.tokyometro.jp/station/honancho/index.html")
 ]
+
+let howToUse: [(title: String, desc: String)] = [
+    ("1. 駅を追加", "最初は丸ノ内線タブしかありません。画面下のボタンを押すと荻窪からどんどん追加されていきます。方南町まで追加したらボタンを押しても反応しなくなります。実際はお気に入りの駅などを選択できるようにして初期表示時に追加されていることが望ましいです。"),
+    ("2. コンテンツ部分をページング", "コンテンツ部分をページングすると連動して駅のタブも中央に移動します。"),
+    ("3. タブ部分を操作", "タブ部分もスクロール可能になっています。確認したい駅をタップすると連動するコンテンツ画面がアニメーションありで表示されます。この際タップされた駅のタブは中央に移動します。"),
+    ("4. コンテンツはダミー", "各タブのページに表示されるコンテンツは今回は共通です。各タブ用のコンテンツ内容を返すAPIを用意して取得したデータを展開するのが通常の運用かと思われます。")
+]
