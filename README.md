@@ -1,9 +1,9 @@
 # SwipePageChanger
 
 This app is a sample app that links the tab displayed  
-in the Navigation Bar and the paging of the content.
+in the Navigation Bar and the paging of the content.  
 The Tab part is scrollable, and the corresponding Tab is  
-displayed with animation in the center of the screen by paging.
+displayed with animation in the center of the screen by paging.  
 In SwiftUI, it's relatively easy to implement  
 because we can easily access the NavigationBar part.
 
@@ -15,7 +15,7 @@ SwiftUI では NavigationBar 部分に容易にアクセスできるため比較
 
 ## Sample GIF and Images
 
-The theme of this app is the Tokyo Metro Marunouchi Line of the Tokyo subway. 　
+The theme of this app is the Tokyo Metro Marunouchi Line of the Tokyo subway.  
 Since it is a sample application, the content is static and common to all stations.
 
 |Add New Page & Paging|Select tab|
@@ -34,13 +34,14 @@ Since it is a sample application, the content is static and common to all statio
 
 ## Point of implementation
 
-* ToolBar modifier and ToolbarItem
-* TabView's PageTabViewStyle
+* `toolBar` modifier and `ToolbarItem`
+* `ScrollViewReader`
+* `TabView`'s `PageTabViewStyle`
 * `selection` (Status of selected item)
 
 ## Article
 
-Qiita Advent Calendar iOS Day 20.
+Qiita Advent Calendar 2021 "iOS" Day 20.
 
 
 ## Contact
