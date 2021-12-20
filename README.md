@@ -42,7 +42,7 @@ Since it is a sample application, the content is static and common to all statio
 ## Article
 
 Qiita Advent Calendar 2021 "iOS" Day 20.  
-[https://qiita.com/items/09809b38dc8b23efa9ac](https://qiita.com/items/09809b38dc8b23efa9ac)
+[https://qiita.com/MilanistaDev/items/09809b38dc8b23efa9ac](https://qiita.com/MilanistaDev/items/09809b38dc8b23efa9ac)
 
 
 ## Contact
