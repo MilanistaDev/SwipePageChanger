@@ -11,7 +11,6 @@ struct ToolBarViewModifier: ViewModifier {
 
     @Binding var selection: Int
     let items: [StationInfo]
-    @State var proxy: ScrollViewProxy?
     private let tabButtonSize: CGSize = CGSize(width: 100.0, height: 44.0)
 
     func body(content: Content) -> some View {
@@ -60,12 +59,9 @@ struct ToolBarViewModifier: ViewModifier {
                                         Spacer()
                                             .frame(width: spacerWidth(geometryProxy.frame(in: .global).origin.x))
                                     }
-                                    .onAppear {
-                                        self.proxy = scrollProxy
-                                    }
                                     .onChange(of: selection) { _ in
                                         withAnimation {
-                                            self.proxy?.scrollTo(selection, anchor: .center)
+                                            scrollProxy.scrollTo(selection, anchor: .center)
                                         }
                                     }
                                 }
