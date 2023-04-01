@@ -21,7 +21,7 @@ struct PageContentView: View {
         }
         .background(Color(UIColor.systemGroupedBackground))
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-        .animation(.linear(duration: 0.3))
+        .animation(.linear(duration: 0.3), value: selection)
         .onAppear {
             selection = items.count - 1
         }
